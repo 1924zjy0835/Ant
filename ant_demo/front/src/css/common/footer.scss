@@ -1,0 +1,167 @@
+@import "init.scss";
+@import "constants.scss";
+
+.footer {
+  width: 100%;
+  //overflow: hidden;
+  //position: fixed;
+  //bottom: 0;
+  //left: 0;
+  //right: 0;
+  font-size: 14px;
+  color: #c9c9c9;
+  padding-top: 20px;
+
+  .footer-top-group {
+    width: 100%;
+    height: 100px;
+    background: #555e67;
+
+
+    .footer-main {
+      width: $mainWidth;
+      margin: 0 auto;
+      //overflow: hidden;
+      padding: 20px 0;
+      box-sizing: border-box;
+      position: relative;
+
+      .logo-box {
+        width: 140px;
+        height: 64px;
+        float: left;
+
+        .iconfont {
+          color: #adff2f;
+          font-size: 64px;
+        }
+      }
+
+      .detail-group {
+        float: right;
+        width: $mainWidth - 140px;
+        padding-left: 20px;
+        box-sizing: border-box;
+
+        .line1-group {
+          overflow: hidden;
+
+          .link {
+            float: left;
+            overflow: hidden;
+
+            li {
+              list-style: none;
+              float: left;
+              padding-left: 10px;
+              padding-right: 10px;
+              border-right: 1px solid #c9c9c9;
+
+              a {
+                text-decoration: none;
+                color: #c9c9c9;
+              }
+
+              &:first-of-type {
+                padding-left: 0;
+              }
+
+              &:last-of-type {
+                border-right: none;
+              }
+            }
+          }
+
+          .focus-us {
+            float: left;
+            margin-left: 40px;
+            overflow: hidden;
+
+            .focus {
+              color: #c9c9c9;
+              float: left;
+              margin-right: 20px;
+            }
+
+            .social-group {
+              overflow: hidden;
+              float: left;
+
+              li {
+                list-style: none;
+
+                a {
+                  color: #fff;
+                  text-decoration: none;
+                }
+              }
+
+              .ant-weixin {
+                float: left;
+                background: url("../../dist/images/weixin-logo.min.jpg");
+                background-repeat: no-repeat;
+                background-size: 20%;
+                cursor: pointer;
+
+                &:hover .weixin-qrcode{
+                  display: block;
+                }
+
+                .weixin {
+                  margin-left: 26px;
+                }
+
+                .weixin-qrcode {
+                  width: 200px;
+                  height: 200px;
+                  background: url("../../dist/images/platform/weixin.min.jpg");
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  display: none;
+                  cursor: pointer;
+                  position: absolute;
+                  left: 520px;
+                  top: -190px;
+                }
+              }
+
+              .ant-weibo {
+                float: right;
+                margin-left: 30px;
+                background: url("../../dist/images/weibo-logo.min.jpg");
+                background-repeat: no-repeat;
+                background-size: 20%;
+
+                .weibo {
+                  margin-left: 26px;
+                }
+              }
+            }
+          }
+        }
+
+        .line2-group {
+          margin-top: 20px;
+          overflow: hidden;
+
+
+          .address {
+            float: left;
+          }
+
+          .contect-us {
+            float: left;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom-group {
+    background: #383e44;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+  }
+}

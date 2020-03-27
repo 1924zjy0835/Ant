@@ -1,0 +1,93 @@
+@import "init.scss";
+@import "constants.scss";
+
+// Define box with width and height.
+.header {
+  width: 100%;
+  height: $pageheigth;
+  //background: black;
+  background: url("../../dist/images/header1.min.jpg");
+  overflow: hidden;
+  //opacity: 0.2;  指定透明度
+  position: fixed;
+  // 指定为固定定位，必须指定顶部，左右两边的宽度
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  .contain {
+    width: $mainWidth;
+    height: 100%;
+    margin: 0 auto;
+
+    .logo-box {
+      width: 140px;
+      height: $pageheigth;
+      // 指定no-repeat代表图片不用重复
+      //background: white;
+      float: left;
+      // logo-box单独显示
+      overflow: hidden;
+
+      // a标签为一个行内元素，如果不指定长宽的话，a标签的作用就不会显示
+      // 将a标签转换为快捷元素
+      // 在html中该a标签为空
+      //a {
+      //  display: block;
+      //  width: 100%;
+      //  height: 100%;
+      //}
+      .iconfont {
+        color: deeppink;
+        font-size: 60px;
+      }
+    }
+
+    .nav {
+      // 和logo-box显示在一行
+      margin-left: 40px;
+      float: left;
+
+      li {
+        float: left;
+        // 设定右外边距
+        margin-right: 40px;
+        height: 100%;
+        // li标签中的文字居中：设定行高，使其居中
+        line-height: $pageheigth;
+        // 去掉li标签前面的小点点
+        list-style: none;
+
+        a {
+          // 设定a标签的颜色
+          color: #ffffff;
+          // 去掉a标签下面的下划线
+          text-decoration: none;
+        }
+
+        &.active {
+          border-bottom: 5px solid #00f;
+        }
+      }
+    }
+
+    .auth-box {
+      float: right;
+      line-height: $pageheigth;
+      height: $pageheigth;
+      color: #fff;
+
+      .iconfont {
+        color: #ffffff;
+        // 指定person的大小
+        font-size: 20px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

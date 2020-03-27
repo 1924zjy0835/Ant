@@ -1,0 +1,144 @@
+@import "constants.scss";
+@import "init.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "body.scss";
+
+body {
+  position: relative;
+}
+
+.main {
+  margin-top: 64px;
+
+  .course-nav-group {
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+
+    .course-nav {
+      width: $mainWidth;
+      height: 100%;
+      margin: 0 auto;
+
+
+      h3.course-online {
+        float: left;
+        font-size: 24px;
+        color: $mainFrontColor;
+        font-weight: 500;
+      }
+
+      .nav-list {
+        float: left;
+        margin-left: 80px;
+        overflow: hidden;
+
+        li {
+          float: left;
+          list-style: none;
+          margin-right: 60px;
+
+          a {
+            text-decoration: none;
+            color: #878787;
+
+            //&:first-of-type {
+            //  color: #000;
+            //}
+          }
+        }
+
+        li.active {
+          a {
+            font-weight: 600;
+            color: $mainFrontColor;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    margin-top: 20px;
+
+    .course-details {
+      $courseItemHeight: 330px;
+      $thumbnailHeight: 256px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li {
+        margin-right: 20px;
+        float: left;
+        width: 252px;
+        background: #fff;
+        height: $courseItemHeight;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        &:hover {
+          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        a {
+          text-decoration: none;
+
+          .thumbnail-group {
+            img {
+              width: 100%;
+              height: $thumbnailHeight;
+            }
+
+            .desc {
+              width: 100%;
+              float: left;
+              padding: 4px 10px;
+              color: $mainFrontColor;
+              margin-top: 4px;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            .more-detail {
+              font-size: 14px;
+              width: 100%;
+
+              .author {
+                float: left;
+                padding-left: 8px;
+                color: $mainFrontColor;
+                padding-top: 10px;
+              }
+
+              .price {
+                float: right;
+                padding-right: 8px;
+                padding-top: 10px;
+
+                .free {
+                  color: rgb(126,211,33);
+                }
+                .pay {
+                  color: rgb(245,74,74);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  //position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

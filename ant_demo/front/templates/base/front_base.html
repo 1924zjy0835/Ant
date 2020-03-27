@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1347266_6jobx7n49pd.css">
+    <link rel="shortcut icon" href="{% static "images/favicon.min.ico" %}"/>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    {% block header %}{% endblock %}
+</head>
+<body>
+<div class="header">
+    <div class="contain">
+        <div class="logo-box">
+            <i class="icon-Txu iconfont"></i>
+            <i class="icon-Txu iconfont"></i>
+        </div>
+        <ul class="nav">
+            <li class="active"><a href="/">首页</a></li>
+            <li><a href="#">资讯</a></li>
+            <li><a href="#">创业课堂</a></li>
+            <li><a href="#">服务大厅</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">搜索</a></li>
+        </ul>
+        <div class="auth-box">
+            <i class="icon-person iconfont"></i>
+            <a href="#">登录</a> /
+            <a href="#">注册</a>
+        </div>
+    </div>
+</div>
+{% block main %}{% endblock %}
+<div class="footer">
+    <div class="footer-top-group">
+        <div class="footer-main">
+            <div class="logo-box">
+                <i class="icon-Txu iconfont"></i>
+                <i class="icon-Txu iconfont"></i>
+            </div>
+            <div class="detail-group">
+                <div class="line1-group">
+                    <ul class="link">
+                        <li><a href="#">关于小蚂蚁</a></li>
+                        <li><a href="#">创业课堂</a></li>
+                        <li><a href="#">寻求报道</a></li>
+                        <li><a href="#">礼包</a></li>
+                    </ul>
+                    <div class="focus-us">
+                        <p class="focus">关于我们：</p>
+                        <ul class="social-group">
+                            <li class="ant-weixin">
+                                <span class="weixin">小蚂蚁公众号</span>
+                                <div class="weixin-qrcode"></div>
+                            </li>
+                            <li class="ant-weibo"><a href="#" class="weibo">小蚂蚁微博</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line2-group">
+                    <p class="address">地址：吉林省长春市卫星广场6543号长春大学东校区</p>
+                    <p class="contect-us">联系我们：0431-888855632</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-group">
+        ©2020 吉林省长春市卫星广场6543号长春大学东校区小蚂蚁课堂
+    </div>
+</div>
+</body>
+</html>

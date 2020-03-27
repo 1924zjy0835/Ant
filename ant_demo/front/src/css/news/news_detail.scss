@@ -1,0 +1,254 @@
+@import "header.scss";
+@import "footer.scss";
+@import "body.scss";
+@import "constants.scss";
+
+.main {
+  .wrapper {
+    .news-wrapper {
+      background: #fff;
+      padding: 20px;
+      width: $mainWidth - 20*2 - $sidebarWidth;
+      position: relative;
+
+      .title {
+        color: #212121;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .news-info {
+        width: 100%;
+        overflow: hidden;
+        color: #878787;
+        margin-top: 10px;
+
+        .desc-info {
+          float: left;
+
+          .author {
+            margin-right: 20px;
+          }
+
+          .pub-time {
+            margin-right: 20px;
+          }
+
+          .category {
+            color: #fff;
+            background: $themeColor;
+            padding: 0 5px;
+            border-radius: 3px;
+            // 指定圆角大弧度
+          }
+        }
+
+        .share-info {
+          float: right;
+          margin-left: 40px;
+          overflow: hidden;
+
+          .share {
+            float: left;
+            margin-right: 6px;
+          }
+
+          .social-group {
+            overflow: hidden;
+            float: right;
+
+            li {
+              list-style: none;
+
+              a {
+                text-decoration: none;
+              }
+            }
+
+            .ant-weixin {
+              float: left;
+              background: url("../../dist/images/weixin-logo.min.jpg");
+              background-repeat: no-repeat;
+              background-size: 100%;
+              cursor: pointer;
+
+              &:hover .weixin-qrcode {
+                display: block;
+              }
+
+              .weixin {
+                margin-left: 26px;
+              }
+
+              .weixin-qrcode {
+                width: 40px;
+                height: 40px;
+                background: url("../../dist/images/platform/weixin.min.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                display: none;
+                cursor: pointer;
+                position: absolute;
+                right: 46px;
+                top: 20px;
+              }
+            }
+
+            .ant-weibo {
+              float: right;
+              margin-left: 10px;
+              background: url("../../dist/images/weibo-logo.min.jpg");
+              background-repeat: no-repeat;
+              background-size: 100%;
+              cursor: pointer;
+
+              &:hover .weibo-qrcode {
+                display: block;
+              }
+
+              .weibo {
+                margin-left: 20px;
+              }
+
+              .weibo-qrcode {
+                width: 40px;
+                height: 40px;
+                background: url("../../src/images/platform/weibo.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                display: none;
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .content-detail {
+        padding-bottom: 20px;
+        margin-top: 20px;
+
+        img {
+          width: 100%;
+          height: 500px;
+        }
+      }
+
+      .comment-wrapper {
+        padding-top: 20px;
+        border-top: 1px solid $borderColor;
+
+        .title {
+          // 文字的大小
+          font-size: 18px;
+          // 文字的颜色的权重
+          font-weight: 400;
+        }
+
+        .comment-group {
+          width: 100%;
+          height: 60px;
+          margin-top: 10px;
+          // 文字的大小
+          font-size: 16px;
+
+          .comment-more {
+            width: 100%;
+            height: 100%;
+            // 输入框的弧度
+            border-radius: 6px;
+            // 边框的颜色去掉
+            outline: none;
+            // 输入框不能拉长
+            resize: none;
+            padding-top: 10px;
+            padding-left: 10px;
+            // 盒子的内边距在盒子内部消化掉
+            box-sizing: border-box;
+          }
+
+          .noLogin-textarea {
+            height: 40px;
+            line-height: 28px;
+          }
+
+          .logined-textarea {
+            height: 60px;
+          }
+        }
+
+        .btn-group {
+          padding-top: 10px;
+
+          .btn {
+            padding: 6px 10px;
+            float: right;
+            // 按钮的背景颜色
+            background: $themeColor;
+            // 边框的高度
+            border: none;
+            // 边框的弧度
+            border-radius: 6px;
+            // 小手
+            cursor: pointer;
+            color: #fff;
+            // 鼠标点击的时候边框的颜色
+            outline: none;
+          }
+        }
+      }
+
+      .comment-list {
+        margin-top: 32px;
+
+        li {
+          padding: 10px;
+          box-sizing: border-box;
+          list-style: none;
+          border-bottom: 1px solid $borderColor;
+
+          .desc-group {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            //overflow: hidden;
+            color: #878787;
+
+            .avatar {
+              float: left;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-top: 5px;
+            }
+
+            .author {
+              float: left;
+              margin-left: 20px;
+            }
+
+            .pub-time {
+              float: right;
+            }
+          }
+
+          .comment-detail {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+
+            .comment-content {
+              margin-left: 60px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
