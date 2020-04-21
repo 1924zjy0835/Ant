@@ -1,0 +1,276 @@
+@import "../common/init.scss";
+@import "../common/constants.scss";
+@import "../common/body.scss";
+@import "../common/header.scss";
+@import "../common/footer.scss";
+@import "course_nav.scss";
+
+.main {
+  .wrapper {
+    margin-top: 20px;
+
+    .course-wrapper {
+      padding: 20px;
+      box-sizing: border-box;
+      background: #fff;
+      position: relative;
+
+      .course-info {
+        .course-title {
+          font-size: 20px;
+
+        }
+
+        .share-price-group {
+          overflow: hidden;
+          margin-top: 20px;
+
+          .share-info {
+            float: left;
+            overflow: hidden;
+
+            .share {
+              float: left;
+              margin-right: 6px;
+            }
+
+            .social-group {
+              overflow: hidden;
+              float: right;
+
+              li {
+                list-style: none;
+
+                a {
+                  text-decoration: none;
+                }
+              }
+
+              .ant-weixin {
+                float: left;
+                background-image: url("../../../dist/images/weixin-logo.min.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+
+                &:hover .weixin-qrcode {
+                  display: block;
+                }
+
+                .weixin {
+                  margin-left: 26px;
+                }
+
+                .weixin-qrcode {
+                  width: 40px;
+                  height: 40px;
+                  background: url("../../../../front/dist/images/platform/weixin.min.jpg");
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  display: none;
+                  cursor: pointer;
+                  position: absolute;
+                  left: 80px;
+                  top: 20px;
+                }
+              }
+
+              .ant-weibo {
+                float: right;
+                margin-left: 10px;
+                background: url("../../../../front/dist/images/weibo-logo.min.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                cursor: pointer;
+
+                &:hover .weibo-qrcode {
+                  display: block;
+                }
+
+                .weibo {
+                  margin-left: 20px;
+                }
+
+                .weibo-qrcode {
+                  width: 40px;
+                  height: 40px;
+                  background: url("../../../../front/dist/images/platform/weibo.jpg");
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  display: none;
+                  cursor: pointer;
+                  position: absolute;
+                  left: 120px;
+                  top: 20px;
+                }
+              }
+            }
+          }
+
+          .price-group {
+            float: right;
+            font-size: 14px;
+
+            .price {
+              color: $freeColor;
+            }
+
+            .pay {
+              color: $payColor;
+            }
+
+            .buy-btn {
+              margin-left: 20px;
+              background: $payColor;
+              color: #fff;
+              // a标签为一个行内元素，将其转换为行内块元素
+              display: inline-block;
+              width: 80px;
+              height: 30px;
+              // 文字水平居中
+              text-align: center;
+              // 文字竖直居中
+              line-height: 30px;
+              // 按钮的弧度
+              border-radius: 5px;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+
+    .course-img {
+      width: 100%;
+      height: 600px;
+      background: #7ed3;
+    }
+
+    .course-info-group {
+      margin-top: 20px;
+      float: left;
+      width: 100%;
+      overflow: hidden;
+
+      .course-group {
+        width: 1000px;
+        float: left;
+
+        .course-info {
+          width: 100%;
+          background: #fff;
+          padding: 20px;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+
+          .course-title {
+            width: 100%;
+
+            .title {
+              font-size: 20px;
+              //margin: 20px 0;
+              border-left: 5px solid #c440a9;
+              padding-left: 20px;
+            }
+          }
+
+          .course-item {
+            color: $assistColor;
+            overflow: hidden;
+            margin-top: 20px;
+
+            .avatar {
+              float: left;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+            }
+
+            .teacher-name {
+              float: left;
+              margin-left: 20px;
+            }
+
+            .teacher-info {
+              float: left;
+              margin-top: 40px;
+              margin-left: -65px;
+            }
+          }
+
+          .course-content-info {
+            font-size: 14px;
+            margin-top: 20px;
+            // 设置行高，自动调节的形式，字体大小的2倍
+            line-height: 2;
+          }
+        }
+      }
+
+      .recommend-group {
+        width: 340px;
+        background: #fff;
+        float: right;
+        padding: 20px;
+        box-sizing: border-box;
+
+        .hot-course {
+          color: rgb(68, 68, 68);
+          font-size: 20px;
+        }
+
+        .recommend-list {
+          li {
+            padding: 10px 0;
+            overflow: hidden;
+            border-bottom: 1px solid $borderColor;
+
+            a {
+              text-decoration: none;
+
+              .left-desc {
+                position: relative;
+                float: left;
+                width: 180px;
+                height: 100px;
+
+
+                .course-detail {
+                  text-decoration: none;
+                  color: #000;
+                  font-size: 16px;
+
+                  &:hover {
+                    color: #5c87d9;
+                  }
+                }
+
+                .teacher-desc {
+                  float: left;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  font-size: 14px;
+                  color: $assistColor;
+                }
+              }
+
+              .right-img {
+                width: 100px;
+                height: 100px;
+                float: right;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}

@@ -1,10 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base/front_base.html" %}
+
+{% block title %}
+    搜索
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static "css/search/search.min.css" %}">
+    <script src="{% static "js/index.min.js" %}/"></script>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            {% include "common/sidebar.html" %}
+            <div class="news-wrapper">
+                <div class="search-info">
+                    <form action="" method="post">
+                        <input type="text" name="info" class="info" value="请输入您要搜索的内容">
+                        <input type="submit" name="search" class="search" value="搜索">
+                    </form>
+                </div>
+                <div class="list-outer-group">
+                    <h3 class="hot-title">
+                        热门推荐
+                    </h3>
+                    <ul class="list-inner-group">
+                        <li>
+                            <div class="thumbnail-group"><a href="#"><img src="{% static "images/news/news.min.jpg" %}"
+                                                                          alt=""></a>
+                            </div>
+                            <div class="news-group">
+                                <p class="title"><a href="#">唐狮潮流冬季短款轻薄羽绒服男青少年连帽韩版印花修身保暖外套潮</a></p>
+                                <p class="desc">品牌: tonlion/唐狮 尺码: XXL S M L XL</p>
+                                <p class="more">
+                                    <span class="detail"><a href="#">更多详情</a></span>
+                                    <span class="pub-time">2020/2/23</span>
+                                    <span class="author">小龙虾</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail-group"><a href="#"><img src="{% static "images/news/news1.min.jpg" %}"
+                                                                          alt=""></a>
+                            </div>
+                            <div class="news-group">
+                                <p class="title"><a href="#">唐狮2019冬装新款毛呢外套 男毛呢外套中长款保暖休闲</a></p>
+                                <p class="desc">品牌: tonlion/唐狮 尺码: XXL S M L XL</p>
+                                <p class="more">
+                                    <span class="detail"><a href="#">更多详情</a></span>
+                                    <span class="pub-time">2020/2/23</span>
+                                    <span class="author">小龙虾</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail-group"><a href="#"><img src="{% static "images/news/news2.min.jpg" %}"
+                                                                          alt=""></a>
+                            </div>
+                            <div class="news-group">
+                                <p class="title"><a href="#">Syoo 推荐加厚棉质纸片人中高领ins超火的打底条纹T女特</a></p>
+                                <p class="desc">主要颜色: 白色条纹 黑色条纹 尺码: 34 36</p>
+                                <p class="more">
+                                    <span class="detail"><a href="#">更多详情</a></span>
+                                    <span class="pub-time">2020/2/23</span>
+                                    <span class="author">小龙虾</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumbnail-group"><a href="#"><img src="{% static "images/news/news3.min.jpg" %}"
+                                                                          alt=""></a>
+                            </div>
+                            <div class="news-group">
+                                <p class="title"><a href="#">胎/ 闭眼入COOLGIRL高腰复古老爹牛仔裤 男友风宽松牛仔裤秋冬女</a></p>
+                                <p class="desc">颜色分类: 烟灰色 尺寸: S M L</p>
+                                <p class="more">
+                                    <span class="detail"><a href="#">更多详情</a></span>
+                                    <span class="pub-time">2020/2/23</span>
+                                    <span class="author">小龙虾</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

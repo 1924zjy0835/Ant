@@ -1,10 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base/front_base.html" %}
+{% load news_filters %}
+
+{% block title %}
+    新闻详情
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/news/news_detail.min.css' %}">
+    <script src="{% static 'arttemplate/template-web.js' %}"></script>
+    <script src="{% static 'js/news_detail.min.js' %}"></script>
+    <script id="comment-item" type="text/html">
+        {% verbatim %}
+        <li>
+            <div class="desc-group">
+                <img src="http://q87jey5py.bkt.clouddn.com/1188d6a610cb85e48bae526ea20edee9.jpg" alt="" class="avatar">
+                <span class="author">{{ comment.author.username }}</span>
+                <!-- dateFormat过滤器是放在首页的index.min.js文件中显示的 -->
+                <span class="pub-time">{{ comment.pub_time|dateFormat }}</span>
+            </div>
+            <div class="comment-detail"><p class="comment-content">{{ comment.content }}</p></div>
+        </li>
+        {% endverbatim %}
+    </script>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            {% include "common/sidebar.html" %}
+            <div class="news-wrapper">
+                <h1 class="title">{{ news.title }}</h1>
+                <div class="news-info">
+                    <div class="desc-info">
+                        <span class="author">{{ news.author.username }}</span>
+                        <span class="pub-time">{{ news.pub_time|time_since }}</span>
+                        <span class="category">{{ news.category.category_name }}</span>
+                    </div>
+                    <div class="share-info">
+                        <span class="share">分享至：</span>
+                        <ul class="social-group">
+                            <li class="ant-weixin">
+                                <span class="weixin"></span>
+                                <div class="weixin-qrcode"></div>
+                            </li>
+                            <li class="ant-weibo"><a href="#" class="weibo"></a>
+                                <div class="weibo-qrcode"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-detail">
+                    {#                <img src="https://static-image.xfz.cn/1584401631_914.jpg" alt="">#}
+                    {{ news.content|safe }}
+                </div>
+                <div class="comment-wrapper">
+                    <h3 class="title">文章评论</h3>
+                    <textarea name="comment" class="comment-textarea logined-textarea"
+                              placeholder="小可爱，留下你的精妙评论吧！~_~"></textarea>
+                    <!-- <textarea name="comment3" class="comment-more noLogin-textarea" placeholder="立即登录，秒评论！~" readonly></textarea>-->
+                    <div class="btn-group">
+                        <button data-news_id="{{ news.pk }}" class="btn">立即评论</button>
+                    </div>
+                </div>
+                <ul class="comment-list">
+                    {% for comment in news.comment.all %}
+                        <li>
+                            <div class="desc-group">
+                                <img src="http://q87jey5py.bkt.clouddn.com/1188d6a610cb85e48bae526ea20edee9.jpg" alt="" class="avatar">
+                                <span class="author">{{ comment.author.username }}</span>
+                                <span class="pub-time">{{ comment.pub_time|time_since }}</span>
+                            </div>
+                            <div class="comment-detail"><p class="comment-content">{{ comment.content|safe }}</p></div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+七牛云存储
+七牛云官网：https://www.qiniu.com/
+注册账号，创建一个存储空间
+
+在后端使用：
+1. 下载Pyhton SDK：pip install qiniu,下载七牛的SDK.
+2. 创建一个获取token的url：在视图函数中创建一个视图函数，用来获取token，视图函数只能通过GET请求
+需要使用到access_key、secret_key、
+
+3. 需要在模板中应用JS-SDK: https://unpkg.com/qiniu-js@<version>/dist/qiniu.min.js

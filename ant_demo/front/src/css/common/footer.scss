@@ -40,7 +40,7 @@
       .detail-group {
         float: right;
         width: $mainWidth - 140px;
-        padding-left: 20px;
+        padding-left: 60px;
         box-sizing: border-box;
 
         .line1-group {
@@ -98,12 +98,12 @@
 
               .ant-weixin {
                 float: left;
-                background: url("../../dist/images/weixin-logo.min.jpg");
+                background: url("http://q87jey5py.bkt.clouddn.com/1585966512076.jpg");
                 background-repeat: no-repeat;
                 background-size: 20%;
                 cursor: pointer;
 
-                &:hover .weixin-qrcode{
+                &:hover .weixin-qrcode {
                   display: block;
                 }
 
@@ -114,13 +114,13 @@
                 .weixin-qrcode {
                   width: 200px;
                   height: 200px;
-                  background: url("../../dist/images/platform/weixin.min.jpg");
+                  background: url("http://q87jey5py.bkt.clouddn.com/1585965801778.jpg");
                   background-repeat: no-repeat;
                   background-size: 100%;
                   display: none;
                   cursor: pointer;
                   position: absolute;
-                  left: 520px;
+                  left: 560px;
                   top: -190px;
                 }
               }
@@ -128,7 +128,7 @@
               .ant-weibo {
                 float: right;
                 margin-left: 30px;
-                background: url("../../dist/images/weibo-logo.min.jpg");
+                background: url("http://q87jey5py.bkt.clouddn.com/1585966472216.jpg");
                 background-repeat: no-repeat;
                 background-size: 20%;
 
@@ -165,3 +165,4 @@
     line-height: 60px;
   }
 }
+

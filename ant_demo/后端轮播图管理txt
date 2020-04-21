@@ -1,0 +1,18 @@
+后端轮播图管理
+
+1. 通过context上下文处理器
+在将数据库中的所有轮播图片取出显示到前端页面的时候，可以采用上下文处理器的方式，
+在视图函数中将数据通过Banners.objects.all()方法取出来，之后通过context传入html，
+在html中通过动态的方式获取banner的各个属性值。
+# 轮播图管理
+def banners_view(request):
+    banners = Banners.objects.all()
+    context = {
+        'banners': banners,
+    }
+    return render(request, 'cms/banners.html', context=context)
+
+
+2. 通过js的方式，由前端返回一个框架，后端返回数据进行填充框架。就是所谓的前后端分离
+在这里使用的是Django art-template javascript前端模板引擎,返回一个前端的框架，但是它需要接收的是，json类型的数据，
+因此，我们需要将我们后端的数据，序列化成为json类型的数据。使用Django rest framework组件进行序列化。

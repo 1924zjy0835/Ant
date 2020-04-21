@@ -5,16 +5,16 @@
 .header {
   width: 100%;
   height: $pageheigth;
-  //background: black;
-  background: url("../../dist/images/header1.min.jpg");
-  overflow: hidden;
+  background: #383e44;
+  //background: url("../../../../front/dist/images/header1.min.jpg");
+  //overflow: hidden;
   //opacity: 0.2;  指定透明度
   position: fixed;
   // 指定为固定定位，必须指定顶部，左右两边的宽度
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
 
   .contain {
     width: $mainWidth;
@@ -75,10 +75,13 @@
     .auth-box {
       float: right;
       line-height: $pageheigth;
+      width: 120px;
       height: $pageheigth;
       color: #fff;
+      position: relative;
 
       .iconfont {
+
         color: #ffffff;
         // 指定person的大小
         font-size: 20px;
@@ -88,6 +91,41 @@
         color: #fff;
         text-decoration: none;
       }
+      .user-more-box {
+      background: #fff;
+      width: 100px;
+      //height: 90px;
+      position: absolute;
+      box-shadow: 0 3px 4px #ccc;
+      border-radius: 5px;
+      top: 65px;
+      //right: 20px;
+        left: 50%;
+        margin-left: -50px;
+      font-size: 14px;
+      z-index: 999;
+      display: none;
+
+      .triangle {
+        border: solid transparent;
+        border-width: 10px;
+        border-bottom-color: #fff;
+        width: 0;
+        height: 0;
+        margin-top: -20px;
+        margin-left: 40px;
+        display: block;
+      }
+
+      a {
+        text-align: center;
+        height: 44px;
+        display: block;
+        color: #6d85ac !important;
+        line-height: 44px;
+        //margin-top: -100px;
+      }
+    }
     }
   }
 }

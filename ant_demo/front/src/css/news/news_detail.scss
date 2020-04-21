@@ -1,7 +1,7 @@
-@import "header.scss";
-@import "footer.scss";
-@import "body.scss";
-@import "constants.scss";
+@import "../common/header";
+@import "../common/footer";
+@import "../common/body";
+@import "../common/constants";
 
 .main {
   .wrapper {
@@ -37,8 +37,8 @@
           .category {
             color: #fff;
             background: $themeColor;
-            padding: 0 5px;
-            border-radius: 3px;
+            padding: 0 8px;
+            border-radius: 6px;
             // 指定圆角大弧度
           }
         }
@@ -67,7 +67,7 @@
 
             .ant-weixin {
               float: left;
-              background: url("../../dist/images/weixin-logo.min.jpg");
+              background: url("http://q87jey5py.bkt.clouddn.com/1585966512076.jpg");
               background-repeat: no-repeat;
               background-size: 100%;
               cursor: pointer;
@@ -83,7 +83,7 @@
               .weixin-qrcode {
                 width: 40px;
                 height: 40px;
-                background: url("../../dist/images/platform/weixin.min.jpg");
+                background: url("http://q87jey5py.bkt.clouddn.com/1585965801778.jpg");
                 background-repeat: no-repeat;
                 background-size: 100%;
                 display: none;
@@ -97,7 +97,7 @@
             .ant-weibo {
               float: right;
               margin-left: 10px;
-              background: url("../../dist/images/weibo-logo.min.jpg");
+              background: url("http://q87jey5py.bkt.clouddn.com/1585966472216.jpg");
               background-repeat: no-repeat;
               background-size: 100%;
               cursor: pointer;
@@ -113,7 +113,7 @@
               .weibo-qrcode {
                 width: 40px;
                 height: 40px;
-                background: url("../../src/images/platform/weibo.jpg");
+                background: url("http://q87jey5py.bkt.clouddn.com/1586175841740.png");
                 background-repeat: no-repeat;
                 background-size: 100%;
                 display: none;
@@ -148,44 +148,36 @@
           font-weight: 400;
         }
 
-        .comment-group {
+        .comment-textarea {
           width: 100%;
+          height: 100%;
+          // 输入框的弧度
+          border-radius: 6px;
+          // 边框的颜色去掉
+          outline: none;
+          // 输入框不能拉长
+          resize: none;
+          padding-top: 10px;
+          padding-left: 10px;
+          // 盒子的内边距在盒子内部消化掉
+          box-sizing: border-box;
+        }
+
+        .noLogin-textarea {
+          height: 40px;
+          line-height: 28px;
+        }
+
+        .logined-textarea {
           height: 60px;
-          margin-top: 10px;
-          // 文字的大小
-          font-size: 16px;
-
-          .comment-more {
-            width: 100%;
-            height: 100%;
-            // 输入框的弧度
-            border-radius: 6px;
-            // 边框的颜色去掉
-            outline: none;
-            // 输入框不能拉长
-            resize: none;
-            padding-top: 10px;
-            padding-left: 10px;
-            // 盒子的内边距在盒子内部消化掉
-            box-sizing: border-box;
-          }
-
-          .noLogin-textarea {
-            height: 40px;
-            line-height: 28px;
-          }
-
-          .logined-textarea {
-            height: 60px;
-          }
         }
 
         .btn-group {
           padding-top: 10px;
+          float: right;
 
           .btn {
             padding: 6px 10px;
-            float: right;
             // 按钮的背景颜色
             background: $themeColor;
             // 边框的高度

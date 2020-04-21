@@ -1,0 +1,92 @@
+<div class="sidebar-wrapper">
+                <div class="title-group">
+                    <span class="title">在线课堂</span>
+                    <span class="more">更多</span>
+                </div>
+
+                <div class="banner-group" id="banner-group">
+                    <ul class="banner-ul" id="banner-ul">
+                        {% for banner in banners %}
+                            <li><a href="{{ banner.link_to }}"><img src="{{ banner.img_url }}"
+                                             alt=""></a></li>
+                        {% endfor %}
+                    </ul>
+                    <span class="arrow left-arrow"> < </span>
+                    <span class="arrow right-arrow"> > </span>
+                    <div class="page-control-group">
+                        <ul class="page-control">
+                        </ul>
+                    </div>
+                </div>
+                <div class="labels-group">
+                    <ul class="labels">
+                        <li><a href="#" style="text-align: center; ">资讯</a></li>
+                        <li><a href="#" style="text-align: center; ">创业课堂</a></li>
+                        <li><a href="#" style="text-align: center; ">服务大厅</a></li>
+                        <li><a href="#" style="text-align: center; ">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="business">
+                    <img src="{% static "images/business.min.jpg" %}" alt="">
+                </div>
+                <div class="platform">
+                    <div class="title-group">
+                    <span class="title">
+                        关注小蚂蚁课堂
+                    </span>
+                    </div>
+                    <div class="focus-group">
+                        <ul class="top-focus">
+                            <li class="zhihu"><a href="#" target="_blank">关注小蚂蚁知乎</a></li>
+                            <li class="weibo"><a href="#" target="_blank">关注小蚂蚁微博</a></li>
+                            <li class="csdn"><a href="#" target="_blank">关注小蚂蚁博客</a></li>
+                        </ul>
+                    </div>
+                    <div class="title-group">
+                    <span class="title">
+                        小蚂蚁微信公众平台
+                    </span>
+                    </div>
+                    <div class="gzh-group">
+                    </div>
+                </div>
+                <div class="hot-news-group">
+                    <div class="title-group">
+                        <span class="title">热门推荐</span>
+                    </div>
+                    <div class="hot-list-group">
+                        <ul class="hot-list">
+                            <li>
+                                <div class="left-group">
+                                    <a href="#">
+                                        唐狮潮流冬季短款轻薄羽绒服...</a>
+                                    <div class="more-group">
+                                        <span class="more">深度报道</span>
+                                        <span class="pub-time">2小时前</span>
+                                    </div>
+                                </div>
+
+                                <div class="right-group">
+                                    <img src="{% static 'images/news/news.min.jpg' %}" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left-group">
+                                    <a href="#">
+                                        唐狮潮流冬季短款轻薄羽绒服...</a>
+                                    <div class="more-group">
+                                        <span class="more">深度报道</span>
+                                        <span class="pub-time">2小时前</span>
+                                    </div>
+                                </div>
+
+                                <div class="right-group">
+                                    <img src="{% static 'images/news/news.min.jpg' %}" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="right-group"></div>
+                    </div>
+                </div>
+
+            </div>

@@ -1,0 +1,138 @@
+@import "../common/init.scss";
+@import "../common/constants.scss";
+@import "../common/header.scss";
+@import "../common/body.scss";
+@import "../common/footer.scss";
+
+.main {
+  .wrapper {
+    .news-wrapper {
+      background: #fff;
+
+      .search-info {
+        text-align: center;
+        .info {
+          width: 800px;
+          height: 40px;
+          outline: none;
+          border-radius: 6px;
+        }
+        .search {
+          text-decoration: none;
+          //width: 60px;
+          //height: 40px;
+          background: #5c87d9;
+          border-radius: 4px;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+      .list-outer-group {
+        background: #fff;
+
+        .hot-title {
+          padding: 20px;
+          padding-bottom: 0;
+        }
+
+        .list-inner-group {
+
+          li {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+
+            .thumbnail-group {
+              float: left;
+              width: $imgWidth;
+              height: $imgHeight;
+
+              a {
+
+                img {
+                  width: $imgWidth;
+                  height: $imgHeight;
+                }
+              }
+            }
+
+            .news-group {
+              float: right;
+              width: $newsWidth - $imgWidth - 20*4px;
+              height: $imgHeight;
+              position: relative;
+
+              .title {
+                font-size: 22px;
+
+                a {
+                  color: #212121;
+                  text-decoration: none;
+
+
+                  &:hover {
+                    color: $themeColor;
+                  }
+                }
+              }
+
+              .desc {
+                color: #878787;
+                margin-top: 10px;
+
+              }
+
+              .more {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                .detail {
+                  a {
+                    color: $themeColor;
+                    text-decoration: none;
+                  }
+
+                }
+
+                .pub-time {
+                  float: right;
+                  margin-left: 20px;
+
+                }
+
+                .author {
+                  float: right;
+
+                }
+              }
+            }
+          }
+        }
+
+        .load-more-group {
+          padding: 20px 0;
+          // 将该标签下所有的元素居中显示
+          text-align: center;
+
+          .load-more {
+            width: 420px;
+            height: 40px;
+            background: #dcdaea;
+            color: #6d85ac;
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+          }
+        }
+      }
+    }
+  }
+}

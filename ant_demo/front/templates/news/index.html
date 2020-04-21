@@ -1,0 +1,74 @@
+{% extends 'base/front_base.html' %}
+{% load news_filters %}
+
+{% block title %}
+    小蚂蚁课堂首页
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/news/index.min.css' %}">
+    <script src="{% static 'arttemplate/template-web.js' %}"></script>
+    <script src="{% static 'js/index.min.js' %}"></script>
+    <script id="news-load-more" type="text/html">
+        {% verbatim %}
+        <!--在verbatim标签中的内容，都会被渲染成一个普通的字符串，并不你能够识别static或url/-->
+        {{ each newses news index }}
+        <li>
+            <!--在verbatim标签中，url可以使用绝对路径的方式，并且要使用news.id，而不能使用news.pk,因为在序列化处理的时候，定义的处理序列化的字段为id，而没有定义pk-->
+            <div class="thumbnail-group"><a href="/news/{{ news.id }}/"><img
+                    src="{{ news.thumbnail }}" alt=""></a>
+            </div>
+            <div class="news-group">
+                <p class="title"><a href="/news/{{ news.id }}/">{{ news.title }}</a></p>
+                <p class="desc">{{ news.desc }}</p>
+                <p class="more">
+                    <span class="detail"><a href="#">{{ news.category.category_name }}</a></span>
+                    <span class="pub-time">{{ news.pub_time|dateFormat }}</span>
+                    <span class="author">{{ news.author.username }}</span>
+                </p>
+            </div>
+        </li>
+        {{ /each }}
+        {% endverbatim %}
+    </script>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            {% include "common/sidebar.html" %}
+            <div class="news-wrapper">
+                <div class="list-outer-group">
+                    <ul class="list-tab">
+                        <li data-category="0" class="active"><a href="javascript: void (0);">最新</a></li>
+                        {% for news_category in news_categories %}
+                            <li data-category="{{ news_category.pk }}"><a
+                                    href="javascript: void (0);">{{ news_category.category_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <ul class="list-inner-group">
+                        {% for news in newses %}
+                            <li>
+                                <div class="thumbnail-group"><a href="{% url 'news:news_detail' news_id=news.pk %}"><img src="{{ news.thumbnail }}" alt=""></a>
+                                </div>
+                                <div class="news-group">
+                                    <p class="title"><a href="{% url 'news:news_detail' news_id=news.pk %}">{{ news.title }}</a></p>
+                                    <p class="desc">{{ news.desc }}</p>
+                                    <p class="more">
+                                        <span class="detail"><a href="#">{{ news.category.category_name }}</a></span>
+                                        <span class="pub-time">{{ news.pub_time|time_since }}</span>
+                                        <span class="author">{{ news.author.username }}</span>
+                                    </p>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="load-more-group">
+                        <button class="load-more" id="load-more">查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

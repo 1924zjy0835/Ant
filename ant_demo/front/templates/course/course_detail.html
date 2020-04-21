@@ -1,10 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base/front_base.html" %}
+
+{% block title %}
+    小蚂蚁课程详情
+{% endblock %}
+
+
+{% block header %}
+    <link rel="stylesheet" href="{% static "css/course/course_detail.min.css" %}">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+    <div class="course-nav-group">
+        <div class="course-nav">
+            <h3 class="course-online">在线课堂</h3>
+            <ul class="nav-list">
+                <li class="active"><a href="#">最新课堂</a></li>
+                <li><a href="#">投资人说</a></li>
+                <li><a href="#">明星案例</a></li>
+                <li><a href="#">创业知识</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="course-wrapper">
+            <div class="course-info">
+                <p class="course-title">对赌是什么 应不应该做对赌？</p>
+                <div class="share-price-group">
+                    <div class="share-info">
+                        <span class="share">分享至：</span>
+                        <ul class="social-group">
+                            <li class="ant-weixin">
+                                <span class="weixin"></span>
+                                <div class="weixin-qrcode"></div>
+                            </li>
+                            <li class="ant-weibo"><a href="#" class="weibo"></a>
+                                <div class="weibo-qrcode"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<div class="price-group">
+                        <span class="price pay">￥49.00</span>
+                        <a href="#"><span class="buy-btn">立即购买</span></a>
+                    </div>-->
+                    <div class="price-group">
+                        <span class="price free">免费</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-img"></div>
+        <div class="course-info-group">
+            <div class="course-group">
+                <div class="course-info">
+                <div class="course-title">
+                    <p class="title">课程讲师</p>
+                </div>
+                <div class="course-item">
+                    <img src="{% static "images/avatar/zjy.min.jpg" %}/" alt="" class="avatar">
+                    <p class="teacher-name">孤烟逐云</p>
+                    <p class="teacher-info">源氏集团CEO</p>
+                </div>
+                <div class="course-content-info">
+                    <p class="content-info">
+                        嗨喽，大家好！欢迎来到小蚂蚁课堂，今天我们要讲的是Python基础课程中的create()以及bulk_create()的用法。Since then, Xiao Lang has
+                        been a passer-by. 从此萧郎是路人。
+                        You are the wind, I am the sand. 你是风儿，我是沙。
+                        Mountain without edge,heaven and earth together,then dare to be unique with the
+                        king.山无棱，天地合，才敢与君绝。
+                        Different road non-phase plan. 道不同不相为谋。
+                        Birds of a feather flock together. 物以类聚，人以群分。
+                        版权声明：本文为CSDN博主「孤烟逐云zjy」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+                        原文链接：https://blog.csdn.net/zjy123078_zjy/article/details/104160010
+                    </p>
+                </div>
+            </div>
+                <div class="course-info">
+                <div class="course-title">
+                    <p class="title">课程讲师</p>
+                </div>
+                <div class="course-item">
+                    <img src="{% static "images/avatar/zjy.min.jpg" %}" alt="" class="avatar">
+                    <p class="teacher-name">孤烟逐云</p>
+                    <p class="teacher-info">源氏集团CEO</p>
+                </div>
+                <div class="course-content-info">
+                    <p class="content-info">
+                        嗨喽，大家好！欢迎来到小蚂蚁课堂，今天我们要讲的是Python基础课程中的create()以及bulk_create()的用法。Since then, Xiao Lang has
+                        been a passer-by. 从此萧郎是路人。
+                        You are the wind, I am the sand. 你是风儿，我是沙。
+                        Mountain without edge,heaven and earth together,then dare to be unique with the
+                        king.山无棱，天地合，才敢与君绝。
+                        Different road non-phase plan. 道不同不相为谋。
+                        Birds of a feather flock together. 物以类聚，人以群分。
+                        版权声明：本文为CSDN博主「孤烟逐云zjy」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+                        原文链接：https://blog.csdn.net/zjy123078_zjy/article/details/104160010
+                    </p>
+                </div>
+            </div>
+                <div class="course-info">
+                <div class="course-title">
+                    <p class="title">课程讲师</p>
+                </div>
+                <div class="course-item">
+                    <img src="{% static "images/avatar/zjy.min.jpg" %}" alt="" class="avatar">
+                    <p class="teacher-name">孤烟逐云</p>
+                    <p class="teacher-info">源氏集团CEO</p>
+                </div>
+                <div class="course-content-info">
+                    <p class="content-info">
+                        嗨喽，大家好！欢迎来到小蚂蚁课堂，今天我们要讲的是Python基础课程中的create()以及bulk_create()的用法。Since then, Xiao Lang has
+                        been a passer-by. 从此萧郎是路人。
+                        You are the wind, I am the sand. 你是风儿，我是沙。
+                        Mountain without edge,heaven and earth together,then dare to be unique with the
+                        king.山无棱，天地合，才敢与君绝。
+                        Different road non-phase plan. 道不同不相为谋。
+                        Birds of a feather flock together. 物以类聚，人以群分。
+                        版权声明：本文为CSDN博主「孤烟逐云zjy」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+                        原文链接：https://blog.csdn.net/zjy123078_zjy/article/details/104160010
+                    </p>
+                </div>
+            </div>
+            </div>
+            <div class="recommend-group">
+                <p class="hot-course">
+                    热门课程
+                </p>
+                <ul class="recommend-list">
+                    <li>
+                        <a href="#">
+                            <div class="left-desc">
+                                <span class="course-detail">教你制作抓住投资人眼球的商业计划书</span>
+                                <span class="teacher-desc">小蚂蚁课堂CEO</span>
+                            </div>
+                            <div class="right-img">
+                                <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="left-desc">
+                                <span class="course-detail">教你制作抓住投资人眼球的商业计划书</span>
+                                <span class="teacher-desc">小蚂蚁课堂CEO</span>
+                            </div>
+                            <div class="right-img">
+                                <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="left-desc">
+                                <span class="course-detail">教你制作抓住投资人眼球的商业计划书</span>
+                                <span class="teacher-desc">小蚂蚁课堂CEO</span>
+                            </div>
+                            <div class="right-img">
+                                <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

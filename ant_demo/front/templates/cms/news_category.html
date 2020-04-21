@@ -1,0 +1,59 @@
+{% extends 'cms/base/cms_base.html' %}
+
+{% block title %}
+    分类管理
+{% endblock %}
+
+{% block head %}
+    <script src="{% static 'js/news_category.min.js' %}"></script>
+{% endblock %}
+
+
+{% block content-header %}
+    <h1>分类管理</h1>
+
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <div class="form-group">
+                        <button id="add-news-btn" class="btn btn-primary pull-right">添加分类</button>
+                    </div>
+                </div>
+                <div class="box-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <td><strong>序号</strong></td>
+                                <td><strong>分类名称</strong></td>
+                                <td><strong>新闻数量</strong></td>
+                                <td><strong>操作</strong></td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for category in categories %}
+                                <!--注意，这里的 {}动态获取的键值都需要加上双引号，否者的话，如果你的分类名称中间含有空格，就会将空格前面的显示为你的分类名称-->
+                                <tr data-pk="{{ category.pk }}" data-name="{{ category.category_name }}">
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ category.category_name }}</td>
+                                <td>20</td>
+                                <td>
+                                    <button class="btn btn-warning btn-xs edit-news-btn">编辑分类</button>
+                                    <button class="btn btn-danger btn-xs delete-news-btn">删除分类</button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar-menu %}
+
+{% endblock %}

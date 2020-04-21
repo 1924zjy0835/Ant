@@ -1,3 +1,4 @@
+#encoding: utf-8
 from django.http import JsonResponse
 
 
@@ -14,6 +15,10 @@ def httpResult(code=httpCode.ok, message="", data=None, kwargs=None):
     if kwargs and isinstance(kwargs, dict) and kwargs.keys():
         json_data.update(kwargs)
     return JsonResponse(json_data)
+
+
+def ok():
+    return httpResult()
 
 
 def params_error(message="", data=None):

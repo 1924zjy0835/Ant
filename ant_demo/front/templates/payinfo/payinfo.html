@@ -1,10 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base/front_base.html" %}
+
+{% block title %}
+    付费资讯
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static "css/payinfo/payinfo.min.css" %}/">
+    <script src="{% static "js/index.min.js" %}"></script>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+    <div class="wrapper">
+        {% include "common/sidebar.html" %}
+        <div class="news-wrapper">
+            <div class="payinfo-img">
+                <img src="../../dist/images/news/news_detail.min.jpg" alt="">
+            </div>
+            <ul class="plan-book-group">
+                <li><a href="#">
+                    <div class="left-book-img">
+                        <h1 class="planbook-name">文档</h1>
+                    </div>
+                    <div class="right-book-info">
+                        <div class="payinfo-title">
+                            如何写好一份商业计划书
+                        </div>
+                        <div class="payinfo-desc">
+                            一份好的商业计划书，是创业成功的开始！
+                        </div>
+                        <span class="price free">免费</span>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="left-book-img">
+                        <h1 class="planbook-name">文档</h1>
+                    </div>
+                    <div class="right-book-info">
+                        <div class="payinfo-title">
+                            如何写好一份商业计划书
+                        </div>
+                        <div class="payinfo-desc">
+                            一份好的商业计划书，是创业成功的开始！
+                        </div>
+                        <span class="price free">免费</span>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="left-book-img">
+                        <h1 class="planbook-name">文档</h1>
+                    </div>
+                    <div class="right-book-info">
+                        <div class="payinfo-title">
+                            如何写好一份商业计划书
+                        </div>
+                        <div class="payinfo-desc">
+                            一份好的商业计划书，是创业成功的开始！
+                        </div>
+                        <span class="price pay">￥9.90</span>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="left-book-img">
+                        <h1 class="planbook-name">文档</h1>
+                    </div>
+                    <div class="right-book-info">
+                        <div class="payinfo-title">
+                            如何写好一份商业计划书
+                        </div>
+                        <div class="payinfo-desc">
+                            一份好的商业计划书，是创业成功的开始！
+                        </div>
+                        <span class="price pay">￥9.90</span>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="left-book-img">
+                        <h1 class="planbook-name">文档</h1>
+                    </div>
+                    <div class="right-book-info">
+                        <div class="payinfo-title">
+                            如何写好一份商业计划书
+                        </div>
+                        <div class="payinfo-desc">
+                            一份好的商业计划书，是创业成功的开始！
+                        </div>
+                        <span class="price pay">￥9.90</span>
+                    </div>
+                </a></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

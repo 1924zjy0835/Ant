@@ -1,10 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base/front_base.html" %}
+
+{% block title %}
+    小蚂蚁课程首页
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static "css/course/course_index.min.css" %}/">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+    <div class="course-nav-group">
+        <div class="course-nav">
+            <h3 class="course-online">在线课堂</h3>
+            <ul class="nav-list">
+                <li class="active"><a href="#">最新课堂</a></li>
+                <li><a href="#">投资人说</a></li>
+                <li><a href="#">明星案例</a></li>
+                <li><a href="#">创业知识</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <ul class="course-details">
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="free">免费</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="pay">￥99.00</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="pay">￥99.00</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="pay">￥98.00</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="free">免费</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="pay">￥99.00</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                        <p class="price"><span class="free">免费</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="thumbnail-group">
+                    <img src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price"><span class="pay">￥99.00</span></p>
+                    </div>
+
+                </div>
+            </a></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
